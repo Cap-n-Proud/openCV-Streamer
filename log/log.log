@@ -1,0 +1,102 @@
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2279,"level":30,"msg":"started","time":"2015-06-09T10:57:21.656Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2279,"level":30,"msg":"started","time":"2015-06-09T10:57:22.520Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2279,"level":30,"msg":"started","time":"2015-06-09T10:57:23.226Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2279,"level":30,"msg":"started","time":"2015-06-09T10:57:44.894Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2279,"level":30,"msg":"started","time":"2015-06-09T10:57:45.191Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2279,"level":30,"msg":"video started /home/pi/bo-Pi/app/bin/cameraON.sh","time":"2015-06-09T10:57:50.059Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2279,"level":30,"msg":"video started /home/pi/bo-Pi/app/bin/cameraOFF.sh","time":"2015-06-09T10:57:54.144Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2362,"level":30,"msg":"started","time":"2015-06-09T10:58:58.288Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2362,"level":30,"msg":"video started /home/pi/bo-Pi/app/bin/cameraON.sh","time":"2015-06-09T10:59:05.209Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2362,"level":30,"msg":"video started /home/pi/bo-Pi/app/bin/cameraOFF.sh","time":"2015-06-09T10:59:11.709Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2495,"level":30,"msg":"servos initialized sudo /home/pi/pi-blaster/pi-blaster 4 17","time":"2015-06-09T11:03:44.947Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2495,"level":30,"msg":"servos parameters: 4 17 0.140 0.140 0.160 0.160","time":"2015-06-09T11:03:44.970Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2495,"level":30,"msg":"New socket.io connection - id: ifiuD7iMVzvlsNkSAAAA  server address: 192.168.1.131","time":"2015-06-09T11:03:49.761Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2495,"level":30,"msg":"New socket.io connection - id: wDhq06CXxt4VzJgdAAAB  server address: 192.168.1.131","time":"2015-06-09T11:03:49.896Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2495,"level":30,"msg":"New socket.io connection - id: gVBhcGKcUfFdQTmuAAAC  server address: 192.168.1.131","time":"2015-06-09T11:03:50.322Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2495,"level":30,"msg":"New socket.io connection - id: 3qBIBDiRI5NueCQAAAAD  server address: 192.168.1.131","time":"2015-06-09T11:03:50.715Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2495,"level":30,"msg":"video /home/pi/bo-Pi/app/bin/cameraON.sh","time":"2015-06-09T11:03:52.529Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2495,"level":30,"msg":"video /home/pi/bo-Pi/app/bin/cameraOFF.sh","time":"2015-06-09T11:03:56.354Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2577,"level":30,"msg":"servos initialized sudo /home/pi/pi-blaster/pi-blaster 4 17","time":"2015-06-09T11:06:42.143Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2577,"level":30,"msg":"servos parameters: 4 17 0.140 0.140 0.160 0.160","time":"2015-06-09T11:06:42.166Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2577,"level":30,"msg":"bo-Pi listening on 192.168.1.131: 999","time":"2015-06-09T11:06:42.296Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2577,"level":30,"msg":"New socket.io connection - id: hZKt2t6H7xsd-aSUAAAA  server address: 192.168.1.131","time":"2015-06-09T11:06:44.297Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2577,"level":30,"msg":"New socket.io connection - id: q7ZTU7q61VpaTqdEAAAB  server address: 192.168.1.131","time":"2015-06-09T11:06:44.429Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2577,"level":30,"msg":"New socket.io connection - id: slRBoNyomK1NUXtcAAAC  server address: 192.168.1.131","time":"2015-06-09T11:06:45.059Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2577,"level":30,"msg":"video /home/pi/bo-Pi/app/bin/cameraON.sh","time":"2015-06-09T11:07:06.213Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2577,"level":30,"msg":"snapshot saved /home/pi/Documents/bo-Pi/SN_15-06-09_11-07-08","time":"2015-06-09T11:07:08.379Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2577,"level":30,"msg":"snapshot saved /home/pi/Documents/bo-Pi/SN_15-06-09_11-07-10","time":"2015-06-09T11:07:10.445Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2577,"level":30,"msg":"snapshot saved /home/pi/Documents/bo-Pi/SN_15-06-09_11-07-11","time":"2015-06-09T11:07:11.922Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2577,"level":30,"msg":"video /home/pi/bo-Pi/app/bin/cameraOFF.sh","time":"2015-06-09T11:07:13.598Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2577,"level":30,"msg":"snapshot saved /home/pi/Documents/bo-Pi/SN_15-06-09_11-07-25","time":"2015-06-09T11:07:25.089Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2577,"level":30,"msg":"shutting down NOW","time":"2015-06-09T11:09:02.016Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1966,"level":30,"msg":"servos initialized sudo /home/pi/pi-blaster/pi-blaster 4 17","time":"2015-06-09T11:09:28.552Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1966,"level":30,"msg":"servos parameters: 4 17 0.140 0.140 0.160 0.160","time":"2015-06-09T11:09:28.592Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1966,"level":30,"msg":"bo-Pi listening on 192.168.1.131: 999","time":"2015-06-09T11:09:28.734Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1966,"level":30,"msg":"servos initialized sudo /home/pi/pi-blaster/pi-blaster 4 17","time":"2015-06-09T11:09:32.725Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1966,"level":30,"msg":"servos parameters: 4 17 0.140 0.140 0.160 0.160","time":"2015-06-09T11:09:32.766Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1966,"level":30,"msg":"bo-Pi listening on 192.168.1.131: 999","time":"2015-06-09T11:09:32.897Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1968,"level":30,"msg":"servos initialized sudo /home/pi/pi-blaster/pi-blaster 4 17","time":"2015-06-09T11:09:32.502Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1968,"level":30,"msg":"servos parameters: 4 17 0.140 0.140 0.160 0.160","time":"2015-06-09T11:09:32.536Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1968,"level":30,"msg":"bo-Pi listening on 192.168.1.131: 999","time":"2015-06-09T11:09:32.668Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1964,"level":30,"msg":"servos initialized sudo /home/pi/pi-blaster/pi-blaster 4 17","time":"2015-06-09T11:09:34.593Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1964,"level":30,"msg":"servos parameters: 4 17 0.140 0.140 0.160 0.160","time":"2015-06-09T11:09:34.623Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1964,"level":30,"msg":"bo-Pi listening on 192.168.1.131: 999","time":"2015-06-09T11:09:34.756Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1964,"level":30,"msg":"New socket.io connection - id: 9oBN7X-HB0RR29KzAAAA  server address: 192.168.1.131","time":"2015-07-03T18:08:26.194Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1964,"level":30,"msg":"New socket.io connection - id: xq1f_1GoJFi2TLpCAAAB  server address: 192.168.1.131","time":"2015-07-03T18:08:27.590Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1964,"level":30,"msg":"video /home/pi/bo-Pi/app/bin/cameraON.sh","time":"2015-07-03T18:08:30.160Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1964,"level":30,"msg":"snapshot saved /home/pi/Documents/bo-Pi/SN_15-07-03_18-09-54","time":"2015-07-03T18:09:54.950Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1964,"level":30,"msg":"snapshot saved /home/pi/Documents/bo-Pi/SN_15-07-03_18-12-00","time":"2015-07-03T18:12:00.129Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1964,"level":30,"msg":"snapshot saved /home/pi/Documents/bo-Pi/SN_15-07-03_18-13-51","time":"2015-07-03T18:13:51.353Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1964,"level":30,"msg":"snapshot saved /home/pi/Documents/bo-Pi/SN_15-07-03_18-13-55","time":"2015-07-03T18:13:55.032Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1964,"level":30,"msg":"snapshot saved /home/pi/Documents/bo-Pi/SN_15-07-03_18-14-27","time":"2015-07-03T18:14:27.230Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1964,"level":30,"msg":"snapshot saved /home/pi/Documents/bo-Pi/SN_15-07-03_18-15-43","time":"2015-07-03T18:15:43.258Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1964,"level":30,"msg":"snapshot saved /home/pi/Documents/bo-Pi/SN_15-07-03_18-16-26","time":"2015-07-03T18:16:26.811Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1964,"level":30,"msg":"shutting down NOW","time":"2015-07-03T18:17:06.948Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1968,"level":30,"msg":"servos initialized sudo /home/pi/pi-blaster/pi-blaster 4 17","time":"2015-07-03T18:17:38.076Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1968,"level":30,"msg":"servos parameters: 4 17 0.140 0.140 0.160 0.160","time":"2015-07-03T18:17:38.113Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1968,"level":30,"msg":"bo-Pi listening on 192.168.1.131: 999","time":"2015-07-03T18:17:38.244Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1966,"level":30,"msg":"servos initialized sudo /home/pi/pi-blaster/pi-blaster 4 17","time":"2015-07-11T11:36:37.994Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1966,"level":30,"msg":"servos parameters: 4 17 0.140 0.140 0.160 0.160","time":"2015-07-11T11:36:38.034Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1966,"level":30,"msg":"bo-Pi listening on 192.168.1.131: 999","time":"2015-07-11T11:36:38.166Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1982,"level":30,"msg":"servos initialized sudo /home/pi/pi-blaster/pi-blaster 4 17","time":"2015-07-17T21:31:24.707Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1982,"level":30,"msg":"servos parameters: 4 17 0.140 0.140 0.160 0.160","time":"2015-07-17T21:31:24.742Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":1982,"level":30,"msg":"bo-Pi listening on 192.168.1.131: 999","time":"2015-07-17T21:31:24.873Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"servos initialized sudo /home/pi/pi-blaster/pi-blaster 4 17","time":"2015-07-18T11:13:10.908Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"servos parameters: 4 17 0.140 0.140 0.160 0.160","time":"2015-07-18T11:13:10.932Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"bo-Pi listening on 192.168.1.131: 999","time":"2015-07-18T11:13:11.024Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: v1oBz3FiQlqVb2CEAAAA  server address: 192.168.1.131","time":"2015-07-18T11:13:15.295Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: vwh5hOLCsfYsLGgXAAAB  server address: 192.168.1.131","time":"2015-07-18T11:13:18.846Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: ZZ1MrXNuFzl4p5BeAAAC  server address: 192.168.1.131","time":"2015-07-18T11:14:05.501Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: l4A9VCn_t8nWoLUDAAAD  server address: 192.168.1.131","time":"2015-07-18T11:14:05.735Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"video /home/pi/bo-Pi/app/bin/cameraON.sh","time":"2015-07-18T11:16:28.381Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: lUme9MxxA6JBFO7uAAAE  server address: 192.168.1.131","time":"2015-07-18T11:19:23.740Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: LToj0X-9itTl2flZAAAF  server address: 192.168.1.131","time":"2015-07-18T11:20:00.418Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: OhWi5PnK5vKAMMa5AAAG  server address: 192.168.1.131","time":"2015-07-18T11:20:12.322Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: -EBDhs2Y4RbMdtezAAAH  server address: 192.168.1.131","time":"2015-07-18T11:24:28.915Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: fxKORjptQv-CverzAAAI  server address: 192.168.1.131","time":"2015-07-18T11:25:09.013Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: 7qOT4qJ13s3ZTse6AAAJ  server address: 192.168.1.131","time":"2015-07-18T11:25:09.869Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: pTjYfIdvp_fjRb5WAAAK  server address: 192.168.1.131","time":"2015-07-18T11:25:45.334Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: s_oC7XFIkWpo4eXVAAAL  server address: 192.168.1.131","time":"2015-07-18T11:26:18.230Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: c9-d0XB87Axqhd6dAAAM  server address: 192.168.1.131","time":"2015-07-18T11:27:32.712Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: is7W6-mky03fvlSSAAAN  server address: 192.168.1.131","time":"2015-07-18T11:29:08.752Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: thtzLe5Hlaa9yw1tAAAO  server address: 192.168.1.131","time":"2015-07-18T11:29:59.846Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: oe1EimYpI2XkrOfPAAAP  server address: 192.168.1.131","time":"2015-07-18T11:31:09.303Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: 9J1uMfJzHVtbk8okAAAQ  server address: 192.168.1.131","time":"2015-07-18T11:32:05.047Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: yUJF2KdqKRHEQk2FAAAR  server address: 192.168.1.131","time":"2015-07-18T11:33:37.690Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: iu-iZIFTmEqIZthXAAAS  server address: 192.168.1.131","time":"2015-07-18T11:34:59.341Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: 0wQJqChpOIrRm2yDAAAT  server address: 192.168.1.131","time":"2015-07-18T11:36:05.503Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: 3xxlz5KqZPj6Pnc_AAAU  server address: 192.168.1.131","time":"2015-07-18T11:37:11.712Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: CRQHO1tzOGmconY8AAAV  server address: 192.168.1.131","time":"2015-07-18T11:37:49.373Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: v84BfDiGirex58oIAAAW  server address: 192.168.1.131","time":"2015-07-18T11:38:35.174Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":2573,"level":30,"msg":"New socket.io connection - id: 5pAJtqgZLtSEMNoMAAAX  server address: 192.168.1.131","time":"2015-07-18T11:39:12.955Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":24040,"level":30,"msg":"servos initialized sudo /home/pi/pi-blaster/pi-blaster 4 17","time":"2015-07-18T11:40:32.403Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":24040,"level":30,"msg":"servos parameters: 4 17 0.140 0.140 0.160 0.160","time":"2015-07-18T11:40:32.425Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":24040,"level":30,"msg":"bo-Pi listening on 192.168.1.131: 999","time":"2015-07-18T11:40:32.518Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":24040,"level":30,"msg":"New socket.io connection - id: arMB3OiO4OshmxNfAAAA  server address: 192.168.1.131","time":"2015-07-18T11:40:35.660Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":24040,"level":30,"msg":"New socket.io connection - id: aqCymWl9AvjZ2VcrAAAB  server address: 192.168.1.131","time":"2015-07-18T11:40:35.792Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":24040,"level":30,"msg":"New socket.io connection - id: 4wHqdS8gG2EbbSbEAAAC  server address: 192.168.1.131","time":"2015-07-18T11:40:35.819Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":24040,"level":30,"msg":"New socket.io connection - id: wLDSg_FmL3yTSveiAAAD  server address: 192.168.1.131","time":"2015-07-18T11:40:36.450Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":24040,"level":30,"msg":"New socket.io connection - id: Y9PRfX9vvUUa6GC3AAAE  server address: 192.168.1.131","time":"2015-07-18T11:40:38.207Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":24040,"level":30,"msg":"New socket.io connection - id: wO17VW1J08WVnq_KAAAF  server address: 192.168.1.131","time":"2015-07-18T11:40:46.893Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":24040,"level":30,"msg":"New socket.io connection - id: cujokx3PEb9OT62UAAAG  server address: 192.168.1.131","time":"2015-07-18T11:40:47.363Z","v":0}
+{"name":"bo-Pi","hostname":"raspberrypi","pid":24040,"level":30,"msg":"video /home/pi/bo-Pi/app/bin/cameraON.sh","time":"2015-07-18T11:40:50.454Z","v":0}

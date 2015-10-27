@@ -1,0 +1,30 @@
+{
+  "server": {
+    "name": "OpenCV streamer",
+    "serverPort": 54321,
+    "serBaud": 38400,
+    "version": "1",
+    "SNFolder": "/home/pi/Documents/SN/",
+    "installPath": "/home/pi/openCVStreamer/",
+    "logfilePath": "/home/pi/Documents/log/",
+    "empty":"N/A"
+  },
+  "camera": {
+    "TLimgWidth": 2592,
+    "TLimgHeight": 1944,
+    "TLInterval": 10000,
+    "SNimgWidth": 320,
+    "SNimgHeight": 240    
+  },
+  "video": {
+    "port": 9999,
+    "videoWidth": 320,
+    "videoHeight": 240,
+    "fps": 5,
+    "crosshair": true,
+    "overlayInfo": true,
+    "onScreenColor": "[0, 255, 0]",
+    "fontBaseSize": "0.5"
+  }
+  
+}

@@ -1,0 +1,23 @@
+{
+  "name": "openCVS-treamer",
+  "version": "2.0.0",
+  "description": "Node application to stream using openCV as capture device",
+  "main": "server.js",
+  "dependencies": {
+	"express": "4.x.x",
+	"nconf": "0.8.x",
+	"socket.io": "1.x.x",
+	"opencv": "3.x.x"
+	},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Paolo Negrini",
+  "license": "MIT",
+"engine": "node 0.12.7",
+"repository" :
+  { "type" : "git"
+  , "url" : "https://github.com/pfnegrini/bot-Pi.git"
+  }
+}

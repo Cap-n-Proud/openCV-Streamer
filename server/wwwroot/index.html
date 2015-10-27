@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>bot-Pi | Welcome</title>
+    <meta content="yes" name="mobile-web-app-capable">
+    <link href="foundation/css/foundation.css" rel="stylesheet">
+    <script src="foundation/js/vendor/modernizr.js"></script>
+        <script src="foundation/js/vendor/jquery.js"></script>
+    <script src="foundation/js/foundation.min.js"></script>
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel='shortcut icon' type='image/x-icon' href='icons/favicon.ico' />
+   <!-- <script src="js/foundation/foundation.slider.js"></script>-->
+    <script src="js/socket.io.js" type="text/javascript"></script>
+    <!--  <script src="jQuery/lib/jquery-1.7.1.js"></script>-->
+    <!--    <link rel="text/html" href="favicon.html">-->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link href="manifest.json" rel="manifest">
+</head>
+
+<body>
+  <div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" ><span></span></a>
+      </section>
+
+      <section class="middle tab-bar-section">
+        <h1 class="title">bot-Pi</h1>
+      </section>
+
+      <section class="right-small">
+        <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+      </section>
+    </nav>
+
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Settings</label></li>
+
+ 
+<!--Motor-->
+      <li>
+       <div class="row">
+                    <div class="small-6 columns">
+                      <i class="fa fa-bolt  fa-2x"></i>
+                      <div class="switch round small right"><input id="Motors" type="checkbox" onclick="MotorF(this)"><label for="Motors"></label></div>
+                    </div>
+                    
+                    <div class="small-3 columns">
+                    &nbsp;
+                    </div>
+                    
+                    <div class="small-3 columns">
+                    &nbsp;
+                    </div>
+               </div>  
+         </li>
+<!--Auto mode-->         
+      <li>
+       <div class="row">
+                    <div class="small-6 columns">
+                      <i class="fa fa-arrows fa-2x"></i>
+                      <div class="switch round small right"><input id="Auto" type="checkbox" onclick="Auto(this)"><label for="Auto"></label></div>
+                    </div>
+                    
+                    <div class="small-3 columns">
+                    &nbsp;
+                    </div>
+                    
+                    <div class="small-3 columns">
+                    &nbsp;
+                    </div>
+               </div>  
+         </li>
+   <!--Video-->      
+      <li>
+       <div class="row">
+                    <div class="small-6 columns">
+                      <i class="fa fa-video-camera  fa-2x"></i>
+                      <div class="switch round small right"><input id="Video" type="checkbox" onclick="VideoF(this)"><label for="Video"></label></div>
+                    </div>
+                    
+                    <div class="small-3 columns">
+                    &nbsp;
+                    </div>
+                    
+                    <div class="small-3 columns">
+                    &nbsp;
+                    </div>
+               </div>  
+         </li>
+<!--      Log to Database-->
+         <li>
+       <div class="row">
+                    <div class="small-6 columns">
+                      <i class="fa fa-database fa-2x"></i>
+                      <div class="switch round small right"><input id="Log" type="checkbox" onclick="LogF(this)"><label for="Log"></label></div>
+                    </div>
+                    
+                    <div class="small-3 columns">
+                    &nbsp;
+                    </div>
+                    
+                    <div class="small-3 columns">
+                    &nbsp;
+                    </div>
+               </div>  
+         </li>     
+         
+<!--  AutoTune-->
+         <li>
+       <div class="row">
+                    <div class="small-6 columns">
+                     <i class="fa fa-magic  fa-2x"></i>
+                      <div class="switch round small right"><input id="Autotune" type="checkbox" onclick="AutoTune(this)"><label for="Autotune"></label></div>
+                    </div>
+                    
+                    <div class="small-3 columns">
+                    &nbsp;
+                    </div>
+                    
+                    <div class="small-3 columns">
+                    &nbsp;
+                    </div>
+               </div>  
+         </li>   
+
+         <!--  Telemetry GPH -->
+         <li>
+       <div class="row">
+                    <div class="small-6 columns">
+                     <i class="fa fa-line-chart  fa-2x"></i>
+                      <div class="switch round small right"><input id="tGPH" type="checkbox" onclick="toggleTelemetryGPH(this)"><label for="tGPH"></label></div>
+                    </div>
+                    
+                    <div class="small-3 columns">
+                    &nbsp;
+                    </div>
+                    
+                    <div class="small-3 columns">
+                    &nbsp;
+                    </div>
+               </div>  
+         </li>
+         
+         <li>
+       <div class="row">
+                    <div class="small-6 columns">
+                      <a href="#" onclick="shutdown()" class="alert button round" style="color:red;"> <i class="fa fa-power-off"></i></a>
+                    </div>
+                    
+                    <div class="small-3 columns">
+                    &nbsp;
+                    </div>
+                    
+                    <div class="small-3 columns">
+                    &nbsp;
+                    </div>
+               </div>  
+         </li>      
+        </ul>
+      
+      
+    </aside>
+
+    <aside class="right-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Commands</label></li>
+
+        <li>
+<!--    right side-->
+        </li>
+      </ul>
+    </aside>
+
+    <section class="main-section">
+      <!-- content goes here -->
+  
+
+
+    <div class="row">
+        <div class="medium-2 columns">
+     
+        </div>
+
+
+        <div class="medium-6 columns">
+   
+   
+ 
+
+<div class="tabs-content">
+  <section role="tabpanel" aria-hidden="false" class="content active" id="panel2-1">
+ <iframe id="videoFeed" src="default.html" width="340" height="260" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>   
+  </section>
+  <section role="tabpanel" aria-hidden="true" class="content" id="panel2-2">
+    
+    <div class="row">
+  <div class="small-4 columns"><span class="labelPID">Angle</span></div>
+  <div class="small-4 columns"><span class="labelPID">Angle Agg</span></div>
+  <div class="small-4  columns"><span class="labelPID">Speed</span></div>
+</div>
+    <ul class="small-block-grid-9">
+                <li><output class="PIDSliderLabel" id=
+                "anglePIDConKpVal"></output>&nbsp; <input class="PIDControlSlider"
+                id="anglePIDConKp" max="1500" min="0" oninput=
+                "anglePIDConKpVal.value=value" step="1" type="range"></li>
+
+
+                <li><output class="PIDSliderLabel" id=
+                "anglePIDConKiVal"></output>&nbsp; <input class="PIDControlSlider"
+                id="anglePIDConKi" max="2000" min="0" oninput=
+                "anglePIDConKiVal.value=value" step="1" type="range"></li>
+
+
+                <li><output class="PIDSliderLabel" id=
+                "anglePIDConKdVal"></output>&nbsp; <input class="PIDControlSlider"
+                id="anglePIDConKd" max="200" min="0" oninput=
+                "anglePIDConKdVal.value=value" step="1" type="range"></li>
+
+
+                <li><output class="PIDSliderLabel" id=
+                "anglePIDAggKpVal"></output>&nbsp; <input class="PIDControlSlider"
+                id="anglePIDAggKp" max="5000" min="0" oninput=
+                "anglePIDAggKpVal.value=value" step="1" type="range"></li>
+
+
+                <li><output class="PIDSliderLabel" id=
+                "anglePIDAggKiVal"></output>&nbsp; <input class="PIDControlSlider"
+                id="anglePIDAggKi" max="5000" min="0" oninput=
+                "anglePIDAggKiVal.value=value" step="1" type="range"></li>
+
+
+                <li><output class="PIDSliderLabel" id=
+                "anglePIDAggKdVal"></output>&nbsp; <input class="PIDControlSlider"
+                id="anglePIDAggKd" max="1500" min="0" oninput=
+                "anglePIDAggKdVal.value=value" step="1" type="range"></li>
+
+
+                <li><output class="PIDSliderLabel" id=
+                "speedPIDKpVal"></output>&nbsp; <input class="PIDControlSlider" id=
+                "speedPIDKp" max="7000" min="3000" oninput="speedPIDKpVal.value=value"
+                step="1" type="range"></li>
+
+
+                <li><output class="PIDSliderLabel" id=
+                "speedPIDKiVal"></output>&nbsp; <input class="PIDControlSlider" id=
+                "speedPIDKi" max="3000" min="0" oninput="speedPIDKiVal.value=value"
+                step="1" type="range"></li>
+
+
+                <li><output class="PIDSliderLabel" id=
+                "speedPIDKdVal"></output>&nbsp; <input class="PIDControlSlider" id=
+                "speedPIDKd" max="1500" min="0" oninput="speedPIDKdVal.value=value"
+                step="1" type="range" value="80"></li>
+
+
+
+            </ul>
+                  
+                  <div class="row">
+		    <div class="small-1 columns">
+		      <output id="calibratedZeroAngleVal"></output>
+		    </div>
+		    <div class="small-5 columns">
+		      <input class="AngleControlSlider" id="calibratedZeroAngle" max="400" min="-400" oninput="calibratedZeroAngleVal.value=value" step="1" type="range">
+                    </div>
+		    
+		    <div class="small-1 columns">
+		    
+		    </div>
+		    
+		    <div class="small-3 columns">
+		      <input id="SCMDCommand" placeholder="SCMD command" type="text">
+		    </div>
+		    
+		    <div class="small-2 columns">
+		      <a class="button round tiny" href="#" onclick="sendCMD()">SCMD</a>
+		    </div>
+		</div>
+                    
+  </section>
+
+  <section role="tabpanel" aria-hidden="true" class="content" id="panel2-3">
+    <h2>Optional content goes here...</h2>
+    
+  </section>
+
+</div>
+        </div>
+
+
+        <div class="medium-4 columns">
+            <iframe id="botControl" src="default.html" width="280" height="280" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+            </div>
+            <ul class="tabs" data-tab role="tablist">
+  <li class="tab-title active" role="presentational" ><a href="#panel2-1" role="tab" tabindex="0" aria-selected="true" controls="panel2-1"><div class="tabItem">CAM</div></a></li>
+  <li class="tab-title" role="presentational" ><a href="#panel2-2" role="tab" tabindex="0"aria-selected="false" controls="panel2-2">PID</a></li>
+  <li class="tab-title" role="presentational"><a href="#panel2-3" role="tab" tabindex="0" aria-selected="false" controls="panel2-3">OPT</a></li>
+<!--  <li class="tab-title" role="presentational" ><a href="#panel2-4" role="tab" tabindex="0" aria-selected="false" controls="panel2-4">Tab 4</a></li>-->
+     
+     <li>&nbsp;</li>
+     <li class="tab-title"> 
+                      <i class="fa fa-bolt  fa-2x"></i>
+                      <div class="switch round small right"><input id="Motors" type="checkbox" onclick="MotorF(this)"><label for="Motors"></label></div>
+     </li>
+     
+</ul>
+        <!--Closes the row-->
+    </div>
+   
+
+    <div class="medium-5 columns">
+    </div>
+
+
+    <div class="row">
+        <div class="medium-6 columns">
+            <i class="fa fa-terminal"></i> <span class="labelSwitch"
+            id="CMD">last command</span>
+        </div>
+
+
+      
+
+        <div class="medium-6 columns">
+            <i class="fa fa-info-circle"></i> <span class="labelSwitch"
+            id="Info">Info</span> 
+            <!--<textarea class="labelSwitch" id="Info" cols="50" rows="5">-->
+        </div>
+    </div>
+
+<!--
+    <div class="row">
+        <div class="medium-3 columns">
+            <i class="fa fa-laptop"></i> <span class="labelSwitch"
+            id="CPUInfo">CPU</span>
+        </div>
+
+
+       <div class="medium-3 columns">
+            <i class="fa fa-balance-scale"></i> <span class="labelSwitch" id="BAL">Balance
+            Index</span>
+        </div>
+
+
+        <div class="medium-3 columns">
+          <i class="fa fa-arrows-h"></i> <span class="labelSwitch" id="Pitch">Pitch</span>
+       </div>
+
+
+        <div class="medium-3 columns">
+           <i class="fa fa-compass"></i> <span class="labelSwitch"
+            id="Compass">compass</span>
+           
+        </div>
+    </div>
+
+-->
+    <div class="row">
+   
+        <div class="medium-12 columns">
+            <!--<iframe src="http://192.168.1.145:54321/ypr" width="250" height="250" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>-->
+            <iframe id="telemetryGPH" frameborder="0" height="380" src="default.html" width=100%></iframe>
+        </div>
+    </div>
+    
+
+    
+    <script src="foundation/js/vendor/jquery.js"></script> 
+    <script src="foundation/js/foundation.min.js"></script> 
+    <script>
+$(document).foundation();
+    </script> 
+    
+    
+     </section>
+
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+       
+       
+       
+    <script>
+    var serverADDR = "N/A";
+    var serverPort = "N/A";
+    var MJPGPort = "N/A";
+    
+    var socket = io();
+    //Slide ranges are automatically calculated as percentage of the default config from Arduino
+    var PID_SLIDE_RANGE = 1.50; 
+
+    window.onload=function()
+    {
+    var classname = document.getElementsByClassName("PIDControlSlider");
+
+    var myFunction = function() {
+        var attribute = this.getAttribute("id");
+        socket.emit('SCMD', this.getAttribute("id")+' '+ this.value);
+        //alert(this.getAttribute("id")+' '+ this.value);
+    };
+
+    for(var i=0;i<classname.length;i++){
+        classname[i].addEventListener('change', myFunction, false);
+    }
+
+  
+    
+    }
+
+   {
+    var classname = document.getElementsByClassName("AngleControlSlider");
+
+    var myFunction = function() {
+        var attribute = this.getAttribute("id");
+        socket.emit('SCMD', this.getAttribute("id")+' '+ this.value);
+        //alert(this.getAttribute("id")+' '+ this.value);
+    };
+
+    for(var i=0;i<classname.length;i++){
+        classname[i].addEventListener('change', myFunction, false);
+    }
+    }
+    
+	
+    function MotorF(element){
+
+    if (element.checked == true) {
+    socket.emit('SCMD', "Motors 1");    
+    }
+    else
+    {
+    socket.emit('SCMD', "Motors 0");
+    }
+    }
+
+    function AutoTune(element){
+
+    if (element.checked == true) {
+    socket.emit('SCMD', "AUTOTUNE 1");    
+    }
+    else
+    {
+    socket.emit('SCMD', "AUTOTUNE 0");
+    }
+    }
+
+    
+    
+		
+
+    function LogF(element){
+    if (element.checked == true) {
+    socket.emit('SerCMD', "LOG_ON");
+    }
+    else
+    {
+    socket.emit('SerCMD', "LOG_OFF");   
+    }
+    }
+
+    function ThrottleSet(val){
+    socket.emit('SCMD', 'Throttle ' + val);
+    document.getElementById("ThrottleVal").value = val;
+
+    }
+
+    function SteerSet(val){
+    socket.emit('SCMD', 'Steer ' + val);
+    document.getElementById("SteerVal").value = val;
+
+    }
+
+    function prntCfg(){
+    socket.emit('SCMD', "printConfig");
+
+    }
+
+    function shutdown(){
+    socket.emit('SHUTDOWN', "now"); 
+    }
+
+    function sendCMD() {
+     //document.getElementById("CMD").innerHTML = document.getElementById("right-label").value;
+      socket.emit('SCMD', document.getElementById("SCMDCommand").value);    
+    }
+
+    socket.on('Info', function(CMD){
+    document.getElementById("Info").innerHTML = CMD.replace("\n", "<br />");    
+    });
+
+    socket.on('CMD', function(CMD){
+    document.getElementById("CMD").innerHTML = CMD;    
+    });
+
+    socket.on('status', function (y, p, r, b, dISTE) {
+        document.getElementById("BAL").innerHTML = dISTE;
+        document.getElementById("Pitch").innerHTML = p;
+        document.getElementById("Compass").innerHTML = y;
+    
+    }); 
+
+    socket.on('CPUInfo', function (temp, usage) {
+    document.getElementById("CPUInfo").innerHTML = temp;
+
+    });
+
+    socket.on('cpuUsageUpdate', function (CPU) {
+    document.getElementById("CPU").innerHTML = CPU; 
+    });
+
+    //socket.on('connected', function(V, PID){
+    //   started=0;
+    //   document.getElementById("Info").innerHTML = 'Server: ' + V + ' Firmware: ' + PID['FirmwareVersion'];
+      //Set defalut values for the PID sliders
+ 
+    //     });
+
+    
+    function setSliders(PID){
+         var PIDSlider = document.getElementsByClassName("PIDControlSlider");
+      var arrayLength = PIDSlider.length;
+              
+      for (var i = 0; i < arrayLength; i++) {
+      //console.log(PIDSlider[i].id + ' ' + parseInt(PID[PIDSlider[i].id]));
+          document.getElementById(PIDSlider[i].id).value = parseInt(PID[PIDSlider[i].id]);
+          document.getElementById(PIDSlider[i].id).max = (1 + PID_SLIDE_RANGE)*parseInt(PID[PIDSlider[i].id]);
+          document.getElementById(PIDSlider[i].id).min = (1 - PID_SLIDE_RANGE)*parseInt(PID[PIDSlider[i].id]);
+          document.getElementById(PIDSlider[i].id + 'Val').value = parseInt(PID[PIDSlider[i].id]);
+      }
+      
+        //console.log(' ' + parseInt(PID['calibratedZeroAngle']));
+          document.getElementById('calibratedZeroAngle').value = parseInt(PID['calibratedZeroAngle']);
+    document.getElementById('calibratedZeroAngle').max = (1 + PID_SLIDE_RANGE)*parseInt(PID['calibratedZeroAngle']);
+    document.getElementById('calibratedZeroAngle').min = (1 - PID_SLIDE_RANGE)*parseInt(PID['calibratedZeroAngle']);
+    document.getElementById('calibratedZeroAngleVal').value = parseInt(PID['calibratedZeroAngle']);
+    
+    }
+
+   
+    socket.on('connected', function(info, serverADDR, sPort, MJPEGPort, PID){
+    started=0;
+   
+    serverADDR = serverADDR.toString();
+    serverPort = sPort.toString(); 
+    MJPEGPort = MJPEGPort.toString();
+    
+    document.getElementById("botControl").src = 'http://' + serverADDR + ':' + serverPort + '/vj';
+    document.getElementById('videoFeed').src = 'http://' + serverADDR + ':' + serverPort + '/video';
+    document.getElementById("telemetryGPH").src = '';
+    //console.log('http://' + serverADDR + ':' + MJPEGPort);
+    document.getElementById("Info").innerHTML = info;
+   //document.getElementById("CMD").innerHTML = 'http://' + serverADDR + ':' + serverPort + '/vj';
+    //setSliders(PID);
+   // document.getElementById("Info").innerHTML = server;
+   
+	
+    });
+
+   function VideoF(element) {
+	var status = 0;
+      if (element.checked == true) {
+	    socket.emit('Video', "cameraON.sh");
+	    status = 1;
+	    
+	 
+	    
+      } else {
+	    socket.emit('Video', "cameraOFF.sh");
+	    status = 0;
+	    }
+	
+	if (status == 1){
+	  setTimeout(camFeedRefresh, 1000);
+	  }
+	  else
+	  {
+	  setTimeout(camOFF, 1000);
+    
+	  }
+    }
+	
+	function camFeedRefresh(){
+	   //  document.getElementById('videoFeed').src = document.getElementById('videoFeed').src = document.getElementById("videoFeed").src = 'http://' + serverADDR + ':' + serverPort + '/video';
+
+		
+	}
+	
+	function camOFF(){
+	   document.getElementById('videoFeed').src = "default.html";
+	 
+	}
+	
+	function takeSnapshot(element) {
+	  socket.emit('takeSnapShot');	
+	}
+	
+function toggleTelemetryGPH(element){
+
+    if (element.checked == true) {
+      document.getElementById('telemetryGPH').src = document.getElementById('telemetryGPH').src = document.getElementById("telemetryGPH").src = 'http://' + serverADDR + ':' + serverPort + '/livedata.html';
+      document.getElementById("Info").innerHTML = 'http://' + serverADDR + ':' + serverPort + '/livedata.html';
+
+    }
+    else
+    {
+      document.getElementById("telemetryGPH").src = '';//'default.html';
+  
+    }
+    }
+
+    </script> 
+
+
+    
+
+    
+    <script>
+      $(document).foundation();
+    </script>
+    <script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+#! /bin/sh
+
+### BEGIN INIT INFO
+# Provides: bot-Pi server
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Should-Start:      $named
+# Default-Start:     2 3 4 5
+# Default-Stop: 
+# Short-Description: start bot-Pi server
+# Description:
+### END INIT INFO
+
+#Activate
+# sudo chmod 0755 /etc/init.d/bot-PiServer
+# sudo update-rc.d bot-PiServer defaults
+
+# Some things that run always
+#su ADD HERE
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    su root -c 'sudo node /home/pi/bot-Pi/server/app/server.js'
+    echo "Starting bo-Pi server"
+    # Print the IP address
+    _IP=$(hostname -I) || true
+    if [ "$_IP" ]; then
+      printf "My IP address is %s\n" "$_IP"
+    fi
+    ;;
+  stop)
+    su root -c 'sudo killall node'
+    echo "bot-Pi server has been stopped (didn't double check though)"
+    ;;
+  *)
+    echo "Usage: /etc/init.d/bot-PiServer {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
