@@ -114,7 +114,7 @@ io.on('connection', function(socket){
   socket.on('screenResQuery', function(){
     socket.emit('screenRes', videoWidth, videoHeight);
     socket.emit('Info', "screen size adjusted to video feed");
-   
+   //console.log("screenquery");
   });     
   
     eventEmitter.on('CMDecho', function(data){

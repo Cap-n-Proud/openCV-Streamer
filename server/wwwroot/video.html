@@ -21,21 +21,21 @@ var canvas = document.getElementById('canvas-video');
 var context = canvas.getContext('2d');
 var img = new Image();
 
-   /* window.onload=function()
+    window.onload=function()
     {
     socket.emit('screenResQuery',1);
-    }*/
+    }
 
 // show loading notice
 context.fillStyle = '#333';
 context.fillText('Loading...', canvas.width/2-30, canvas.height/3);
-/*
-  socket.on('screenRes', function(){
-    document.getElementById("canvas-video").width = videoWidth;    
-    document.getElementById("canvas-video").height = videoHeight;    
+
+  socket.on('screenRes', function(videoWidth, videoHeight){
+    document.getElementById("canvas-video").width = parseInt(videoWidth);    
+    document.getElementById("canvas-video").height = parseInt(videoHeight); 
+    //console.log(videoWidth);
     });     
   
-  */  
 socket.on('frame', function (data) {
   // Reference: http://stackoverflow.com/questions/24107378/socket-io-began-to-support-binary-stream-from-1-0-is-there-a-complete-example-e/24124966#24124966
     var uint8Arr = new Uint8Array(data.buffer);

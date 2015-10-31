@@ -4,9 +4,9 @@
     "serverPort": 54321,
     "serBaud": 38400,
     "version": "1",
-    "SNFolder": "/home/pi/Documents/SN/",
-    "installPath": "/home/pi/openCVStreamer/",
-    "logfilePath": "/home/pi/Documents/log/",
+    "SNFolder": "/home/odroid/Documents/SN/",
+    "installPath": "/home/odroid/openCV-Streamer/",
+    "logfilePath": "/home/odroid/Documents/log/",
     "empty":"N/A"
   },
   "camera": {
@@ -20,11 +20,13 @@
     "port": 9999,
     "videoWidth": 320,
     "videoHeight": 240,
-    "fps": 5,
-    "crosshair": true,
-    "overlayInfo": true,
+    "fps": 20,
+    "drawCrosshair": true,
+    "drawOverlayInfo": true,
+    "drawCompass": true,
     "onScreenColor": "[0, 255, 0]",
-    "fontBaseSize": "0.5"
+    "fontBaseSize": "0.5",
+    "hudColor": "[0, 255, 0]"
   }
   
 }
