@@ -1,6 +1,6 @@
 {
-  "name": "openCV-Streamer",
-  "version": "1",
+  "name": "openCVS-treamer",
+  "version": "2.0.0",
   "description": "Node application to stream using openCV as capture device",
   "main": "server.js",
   "dependencies": {
@@ -18,6 +18,6 @@
 "engine": "node 0.12.7",
 "repository" :
   { "type" : "git"
-  , "url" : "https://github.com/pfnegrini/openCV-Streamer.git"
+  , "url" : "https://github.com/pfnegrini/bot-Pi.git"
   }
 }
