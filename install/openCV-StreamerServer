@@ -1,13 +1,13 @@
 #! /bin/sh
 
 ### BEGIN INIT INFO
-# Provides: bot-PiServer
+# Provides: openCV-Streamer
 # Required-Start:    $remote_fs $syslog
 # Required-Stop:     $remote_fs $syslog
 # Should-Start:      $named
 # Default-Start:     2 3 4 5
 # Default-Stop: 
-# Short-Description: start bot-Pi server
+# Short-Description: start openCV-Streamer server
 # Description:
 ### END INIT INFO
 
@@ -21,8 +21,9 @@
 # Carry out specific functions when asked to by the system
 case "$1" in
   start)
-    su root -c 'sudo node /home/pi/bot-Pi/server/app/server.js'
-    echo "Starting bo-Pi server"
+	su root -c 'sudo modprobe bcm2835-v4l2'
+        su root -c 'sudo node /home/pi/openCV-Streamer/server/app/server.js'
+    echo "Starting openCV-Streamer server"
     # Print the IP address
     _IP=$(hostname -I) || true
     if [ "$_IP" ]; then
@@ -34,7 +35,7 @@ case "$1" in
     echo "bot-Pi server has been stopped (didn't double check though)"
     ;;
   *)
-    echo "Usage: /etc/init.d/bot-PiServer {start|stop}"
+    echo "Usage: /etc/init.d/openCV-Streamer {start|stop}"
     exit 1
     ;;
 esac
