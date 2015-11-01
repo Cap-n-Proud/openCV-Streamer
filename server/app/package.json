@@ -1,6 +1,6 @@
 {
   "name": "openCV-Streamer",
-  "version": "1",
+  "version": "2.0.0",
   "description": "Node application to stream using openCV as capture device",
   "main": "server.js",
   "dependencies": {

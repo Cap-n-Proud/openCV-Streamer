@@ -53,7 +53,7 @@ sudo chmod 0755 /home/pi/Documents/openCV-StreamerServer
 mkdir /home/pi/Documents/log/
 sudo chmod 0755 /home/pi/Documents/log/
 
-cd /home/pi/bot-Pi/server/app
+cd /home/pi/openCV-Streamer/server/app
 npm install
 
 
