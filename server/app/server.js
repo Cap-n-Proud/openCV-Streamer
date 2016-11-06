@@ -1,6 +1,5 @@
 // sudo udevadm control --reload-rules
 // to refresh the port allocation
-// cd /home/pi/Bailey/server/app
 
 var nconf = require('nconf');
 nconf.argv()
@@ -9,12 +8,31 @@ nconf.argv()
 
 var events = require('events');
 var eventEmitter = new events.EventEmitter();
+var nodeLib = nconf.get('server:nodeLib');
 var logfilePath = nconf.get('server:logfilePath');
 
-//--------------- Logging middleware ---------------
+var telemetryfilePath = nconf.get('telemetry:telemetryfilePath');
+var bunyan = require('bunyan');
 
+//--------------- Logging middleware ---------------
+var log = bunyan.createLogger({
+  name: 'bot',
+  streams: [
+    /*{
+      level: 'debug',
+      stream: process.stdout            // log INFO and above to stdout
+    },*/
+    //Log should be outside app folders
+    {
+      path: logfilePath + 'bot-Pilog.log'  // log ERROR and above to a file
+    }
+  ]
+});
+
+var fs = require('safefs');
 var SEPARATOR = nconf.get('telemetry:SEPARATOR');
 var installPath = nconf.get('server:installPath');
+var com = require('serialport');
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
@@ -33,6 +51,9 @@ var videoHeight = nconf.get('video:videoHeight');
 var fps= nconf.get('video:fps');
 
 // include custom functions ======================================================================
+var systemModules = require(installPath + 'server/app/lib/systemModules');
+var functions = require(installPath + 'server/app/lib/functions');
+var camera = require(installPath + 'server/app/lib/camera');
 var videoFeed = require(installPath + 'server/app/lib/video');
 
 
@@ -42,6 +63,24 @@ var videoFeed = require(installPath + 'server/app/lib/video');
 require('./routes')(app);
 
 app.use(express.static(installPath + 'server/wwwroot'));
+
+var serverADDR = 'N/A';
+var LogR = 0;
+var TelemetryFN = 'N/A';
+var prevTel="";
+var prevPitch="";
+var THReceived=0;
+
+var TelemetryHeader = 'N/A';
+var PIDHeader ='N/A';
+var ArduSysHeader;
+var Telemetry ={};
+var PID ={};
+var PIDVal;
+var ArduSys = {};
+var temperature;
+
+
 
 
 //Get IP address http://stackoverflow.com/questions/3653065/get-local-ip-address-in-node-js
@@ -84,10 +123,15 @@ io.on('connection', function(socket){
     var myDate = new Date();
    
    var startMessage = 'Connected ' + myDate.getHours() + ':' + myDate.getMinutes() + ':' + myDate.getSeconds()+ ' v' + version + ' @' + serverADDR;
-    socket.emit('connected', startMessage, serverADDR, serverPort, videoFeedPort);
+  //Init the heades for telemtry data
+   serialPort.write('READ RemoteInit\n\r');
+
+    //socket.emit('serverADDR', serverADDR);
+    socket.emit('connected', startMessage, serverADDR, serverPort, videoFeedPort, PID);
     console.log('New socket.io connection - id: %s', socket.id);
     
     //Add also the disconnection event
+    log.info('Client connected ' + socket.id, startMessage, serverADDR, serverPort, videoFeedPort, PID + ' video: ' + videoWidth, videoHeight, fps);
     
     setTimeout(function() {
         videoFeed.startVideoFeed(socket, videoWidth, videoHeight, fps); 
@@ -102,30 +146,53 @@ io.on('connection', function(socket){
   }, 250);
 */
   
+  setInterval(function(){
+
+  var usage = "N/A";
+  temperature = fs.readFileSync("/sys/class/thermal/thermal_zone0/temp");
+  temperature = ((temperature/1000).toPrecision(3)) + "°C";
+
+  socket.emit("CPUInfo", temperature, usage);
+  }, 3 * 1000);
+ 
+  socket.on('Video', function(Video){
+   socket.emit('CMD', Video);
+    function puts(error, stdout, stderr) { sys.puts(stdout) }
+    exec('sudo bash ' + installPath + 'server/app/bin/' + Video, puts);
+        
+    });
+
+
+  //Server Commands
+
+  socket.on('REBOOT', function(){
+    function puts(error, stdout, stderr) { sys.puts(stdout) }
+    log.info('Server rebootiing now');
+    exec('sudo reboot now');
+    sockets.emit('Info', "Rebooting")
+
+  });
+
+  socket.on('SHUTDOWN', function(){
+    socket.emit('Info', "Bailey going down for maintenance now!");
+    log.info('Bailey going down for maintenance now!');
+    function puts(error, stdout, stderr) { sys.puts(stdout) }
+    exec('sudo shutdown now');
+    
+  });
+  
   socket.on('disconnect', function(){
     console.log('Disconnected id: %s', socket.id);
-     }); 
+    log.info('Client disconnected ' + socket.id);
+  }); 
   
   socket.on('connected', function(){
     //console.log('CONNECTED id: %s', socket.id);
    // log.info('Client disconnected ' + socket.id);sudo modprobe bcm2835-v4l2
   });   
   
-  socket.on('screenResQuery', function(){
-    socket.emit('screenRes', videoWidth, videoHeight);
-    socket.emit('Info', "screen size adjusted to video feed");
-   //console.log("screenquery");
-  });     
   
-    eventEmitter.on('CMDecho', function(data){
-        socket.emit('CMD', data);
 
-  }); 
- 
-    eventEmitter.on('serialData', function(data){
-        socket.emit('serialData', data);
-
-  }); 
  
 });
 
@@ -138,12 +205,14 @@ io.on('disconnect', function () {
 
 http.listen(serverPort, function(){
 console.log('listening on *: ' + serverADDR + ':' + serverPort + ' video feed: ' + videoFeedPort);
+log.info('Server listening on ' + serverADDR + ':' + serverPort + ' video feed: ' + videoFeedPort);
  
-
  
 });
 
 
+module.exports.Telemetry = Telemetry;
+module.exports.temperature = temperature;
 module.exports.nconf = nconf;
     
   

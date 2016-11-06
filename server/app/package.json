@@ -1,13 +1,17 @@
 {
-  "name": "openCV-Streamer",
+  "name": "bot",
   "version": "2.0.0",
-  "description": "Node application to stream using openCV as capture device",
+  "description": "Node application to control robots",
   "main": "server.js",
   "dependencies": {
 	"express": "4.x.x",
 	"nconf": "0.8.x",
+	"events":"1.x.x",
+	"bunyan": "1.x.x",
+	"serialport": "4.x.x",
+	"safefs": "4.x.x",
 	"socket.io": "1.x.x",
-	"opencv": "3.x.x"
+	"opencv": "x.x.x"
 	},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,6 +22,6 @@
 "engine": "node 0.12.7",
 "repository" :
   { "type" : "git"
-  , "url" : "https://github.com/pfnegrini/openCV-Streamer.git"
+  , "url" : "https://github.com/pfnegrini/bot-Pi.git"
   }
 }
