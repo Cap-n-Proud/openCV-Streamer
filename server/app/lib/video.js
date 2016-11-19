@@ -13,10 +13,19 @@ var e = 0;
 */
 var screenMargin = 3;
 
-var camera = new cv.VideoCapture(0);
+
+
+try {
+    var camera = new cv.VideoCapture(0);
+    console.log("Camera opened")
+
+} catch (e) {
+    console.log("Couldn't start camera:", e)
+        //camera.release();
+}
 
 function startVideoFeed(socket, videoWidth, videoHeight, fps) {
-
+    camera.release(socket, videoWidth, videoHeight, fps);
     camera.setWidth(videoWidth);
     camera.setHeight(videoHeight);
     var camInterval = 1000 / fps;
@@ -48,7 +57,6 @@ function startVideoFeed(socket, videoWidth, videoHeight, fps) {
 
         frame++;
         im = camera.ReadSync();
-        if (server.nconf.get('video:drawCompass')) drawCompass(im, videoWidth, videoHeight, server.Telemetry['yaw']);
         if (server.nconf.get('video:drawCrosshair')) drawCrosshair(im, videoWidth, videoHeight);
         if (server.nconf.get('video:drawOverlayInfo')) drawOverlayInfo(im, videoWidth, videoHeight, rss, fps);
 
@@ -65,6 +73,7 @@ function startVideoFeed(socket, videoWidth, videoHeight, fps) {
         } else {
             e++
         }
+        //im.save('test.jpg');
         im.release();
         d = new Date();
         fps = 1000 / (d.getTime() - start);
@@ -168,9 +177,9 @@ function drawOverlayInfo(im, videoWidth, videoHeight, memory, fps) {
     im.putText("p: " + server.Telemetry['pitch'], rightCol, videoHeight - 4 * lineSpace - screenMargin, "CV_FONT_HERSHEY_SIMPLEX", onScreenColor, fontSize);
     im.putText("t: " + server.temperature, rightCol, videoHeight - 1 * lineSpace - screenMargin, "CV_FONT_HERSHEY_SIMPLEX", onScreenColor, fontSize);
 
-    //im.putText("t: " + server.nconf.get('server:version'), 0.8 * videoWidth, 0.3 * videoHeight - 3 * lineSpace, "CV_FONT_HERSHEY_SIMPLEX", server.nconf.get('video:onScreenColor'), 0.5);    
+    //im.putText("t: " + server.nconf.get('server:version'), 0.8 * videoWidth, 0.3 * videoHeight - 3 * lineSpace, "CV_FONT_HERSHEY_SIMPLEX", server.nconf.get('video:onScreenColor'), 0.5);
 
-    // im.putText(" x " + videoHeight, 0.01 * videoWidth + 10, 0.9 * videoHeight, "CV_FONT_HERSHEY_SIMPLEX", onScreenColor, fontSize);      
+    // im.putText(" x " + videoHeight, 0.01 * videoWidth + 10, 0.9 * videoHeight, "CV_FONT_HERSHEY_SIMPLEX", onScreenColor, fontSize);
 
     im.putText("m: " + parseInt(memory), rightCol, videoHeight - 0 * lineSpace - screenMargin, "CV_FONT_HERSHEY_SIMPLEX", onScreenColor, fontSize);
     im.putText("m: " + parseInt(memory), rightCol, videoHeight - 0 * lineSpace - screenMargin, "CV_FONT_HERSHEY_SIMPLEX", onScreenColor, fontSize);

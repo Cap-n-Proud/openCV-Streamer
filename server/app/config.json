@@ -1,13 +1,13 @@
 {
   "server": {
-    "name": "bot-Pi",
+    "name": "openCV Streamer",
     "serverPort": 54321,
     "serBaud": 38400,
     "serPort": "/dev/ttyUSB0",
-    "version": "2",
+    "version": "",
     "nodeLib": "",
     "SNFolder": "/home/odroid/Documents/SN/",
-    "installPath": "/home/odroid/ubuntuBot/",
+    "installPath": "/home/odroid/openCV-Streamer/",
     "logfilePath": "/home/odroid/Documents/log/",
     "empty":"N/A"
   },
@@ -15,18 +15,7 @@
     "telemetryfilePath": "/home/odroid/Documents/telemetry/",
     "SEPARATOR": ","    
   },
-  "hardware":{
-    "SERVO_1_GPIO": 4,
-    "SERVO_2_GPIO": 17,
-    "SERVO_1_MIN": "0.140",
-    "SERVO_1_MAX": "0.160",
-    "SERVO_2_MIN": "0.140",
-    "SERVO_2_MAX": "0.160"    
-  },
-  "ArduinoCfg":{
-    "SERVO_1_GPIO": 4,
-    "SERVO_2_GPIO": 17    
-  },
+
   "camera": {
     "TLimgWidth": 2592,
     "TLimgHeight": 1944,
@@ -38,10 +27,10 @@
     "port": 9999,
     "videoWidth": 320,
     "videoHeight": 240,
-    "fps": 10,
-    "drawCrosshair": false,
-    "drawOverlayInfo": true,
-    "drawCompass": true,
+    "fps": 1,
+    "drawCrosshair": true,
+    "drawOverlayInfo": false,
+    "drawCompass": false,
     "onScreenColor": "[0, 255, 0]",
     "fontBaseSize": "0.5",
     "hudColor": "[0, 255, 0]"

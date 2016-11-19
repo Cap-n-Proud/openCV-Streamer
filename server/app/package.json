@@ -1,6 +1,6 @@
 {
-  "name": "bot",
-  "version": "2.0.0",
+  "name": "openCV streamer",
+  "version": "0.0.1",
   "description": "Node application to control robots",
   "main": "server.js",
   "dependencies": {
@@ -19,9 +19,9 @@
   },
   "author": "Paolo Negrini",
   "license": "MIT",
-"engine": "node 0.12.7",
+"engine": "node 7.1.0",
 "repository" :
   { "type" : "git"
-  , "url" : "https://github.com/pfnegrini/bot-Pi.git"
+  , "url" : "https://github.com/pfnegrini/openCV-Streamer.git"
   }
 }
